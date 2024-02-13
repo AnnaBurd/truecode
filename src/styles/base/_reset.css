@@ -1,0 +1,41 @@
+/*
+    Note: this file "resets" css styles to a consistent baseline across browsers. 
+    
+    There are many resets and normalize files availiable, e.g. https://necolas.github.io/normalize.css/8.0.1/normalize.css or https://meyerweb.com/eric/tools/css/reset/, but I prefer to use a smaller set of rules by Josh Comeau (https://www.joshwcomeau.com/css/custom-css-reset/).
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}

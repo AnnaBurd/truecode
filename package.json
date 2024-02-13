@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "A test task for job application to truecode web studio (Junior frontend dev position)",
   "scripts": {
-    "sass-dev": "sass --watch --update --style=expanded src/styles/sass:dist/css",
-    "sass-prod": "sass --no-source-map --style=compressed src/styles/sass:dist/css"
+    "sass-dev": "sass --watch --update --style=expanded src/styles:dist/css",
+    "sass-prod": "sass --no-source-map --style=compressed src/styles:dist/css"
   },
   "author": "Anna Burdanova",
   "license": "ISC",
