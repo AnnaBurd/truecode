@@ -2,10 +2,16 @@ $video_src_width: 1280
 $video_src_height: 676
 $aspect_ratio: calc($video_src_width / $video_src_height)
 
-$letters_width: 80vw
+$letters_width: 40vw
 $letters_height: calc($letters_width / $aspect_ratio)
 
 .hero
+    height: 100vh
+    &__content
+        height: 100%
+        display: grid
+        place-content: center start
+        grid-template-columns: 10px 1fr
     &__heading
         // font-family: var(--secondary-font-family)
         // color: var(--pale-yellow)
@@ -15,6 +21,16 @@ $letters_height: calc($letters_width / $aspect_ratio)
         // line-height: 0.7
         width: $letters_width
         height: $letters_height
+
+    &__line
+        grid-row: 1 / 3
+
+    &__text
+        text-transform: uppercase
+        color: var(--fiery-red)
+        font-size: 3.6rem
+        font-weight: 500
+        letter-spacing: 0.055em
 
 .mask-group
     position: relative
