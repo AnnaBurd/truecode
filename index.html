@@ -8,39 +8,43 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__logo">
-        <img src="dist/logo.svg" alt="Mars Logo" />
+      <div class="header__content container">
+        <div class="header__logo">
+          <img src="dist/logo.svg" alt="Mars Logo" />
+        </div>
+        <nav class="header__nav">
+          <ul>
+            <li><a class="header__navlink" href="#">О Марсе</a></li>
+            <li><a class="header__navlink" href="#">Процесс</a></li>
+            <li><a class="header__navlink" href="#">Билеты</a></li>
+            <li><a class="header__navlink" href="#">Новости</a></li>
+            <li><a class="header__navlink" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="btn header__action-button">Купить Билеты</button>
       </div>
-      <nav class="header__nav">
-        <ul>
-          <li><a class="header__navlink" href="#">О Марсе</a></li>
-          <li><a class="header__navlink" href="#">Процесс</a></li>
-          <li><a class="header__navlink" href="#">Билеты</a></li>
-          <li><a class="header__navlink" href="#">Новости</a></li>
-          <li><a class="header__navlink" href="#">Контакты</a></li>
-        </ul>
-      </nav>
-      <button class="btn header__action-button">Купить Билеты</button>
     </header>
-    <main class="layout__content">
+    <main class="">
       <section class="hero">
         <div class="background"></div>
         <div class="fog">
           <div class="fog__layer fog__layer--1"></div>
         </div>
 
-        <div class="hero__line">line</div>
-        <p class="hero__text">Точка назначения:</p>
+        <div class="container">
+          <div class="hero__line">line</div>
+          <p class="hero__text">Точка назначения:</p>
 
-        <div class="hero__heading mask-group">
-          <!-- <h1 class="hero__heading">MAPC (fallback)</h1> -->
-          <video
-            class="mask-group__content"
-            src="dist/video/Mars.m4v"
-            autoplay
-            loop
-            muted
-          ></video>
+          <div class="hero__heading mask-group">
+            <!-- <h1 class="hero__heading">MAPC (fallback)</h1> -->
+            <video
+              class="mask-group__content"
+              src="dist/video/Mars.m4v"
+              autoplay
+              loop
+              muted
+            ></video>
+          </div>
         </div>
       </section>
     </main>
