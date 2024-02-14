@@ -1,0 +1,32 @@
+$texture_src_width: 3840
+$texture_src_height: 1080
+$aspect_ratio: calc($texture_src_width / $texture_src_height)
+
+$fog_height: 100vh
+$fog_width: calc($fog_height * $aspect_ratio)
+
+.fog
+    position: absolute
+    width: 100%
+    height: 100%
+    overflow: hidden
+    z-index: 1
+
+    &__layer
+        position: absolute
+        height: $fog_height
+        width: calc( $fog_width * 2)
+        z-index: 2
+
+        &--1
+            background: url('../../dist/images/fog_texture.png')
+            background-repeat: repeat-x
+            background-size: auto $fog_height
+            background-position: left
+            animation: fog 12s infinite linear
+
+@keyframes fog
+    0%
+        transform: translate3D(0, 0, 0)
+    100%
+        transform: translate3D(- $fog_width, 0, 0)
