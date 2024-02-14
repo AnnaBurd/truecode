@@ -1,0 +1,31 @@
+$video_src_width: 1280
+$video_src_height: 676
+$aspect_ratio: calc($video_src_width / $video_src_height)
+
+$letters_width: 100vw
+$letters_height: calc($letters_width / $aspect_ratio)
+
+.hero
+    &__heading
+        // font-family: var(--secondary-font-family)
+        // color: var(--pale-yellow)
+        // font-size: 72rem
+        // font-weight: 500
+        // letter-spacing: -2rem
+        // line-height: 0.7
+        width: $letters_width
+        height: $letters_height
+
+.mask-group
+    position: relative
+    overflow: hidden
+    &__content
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        mask-image: url("../../../dist/images/Mask.png")
+        mask-repeat: no-repeat
+        mask-size: contain
+        mask-position: center

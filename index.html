@@ -6,8 +6,8 @@
     <title>Mars: Купить билеты 🚀</title>
     <link rel="stylesheet" href="dist/css/main.css" />
   </head>
-  <body class="layout">
-    <header class="layout__content header">
+  <body>
+    <header class="header">
       <div class="header__logo">logo</div>
       <nav class="header__nav">
         <ul>
@@ -21,12 +21,23 @@
       <button class="btn header__action-button">Купить Билеты</button>
     </header>
     <main class="layout__content">
-      <section>
-        <p>Точка назначения:</p>
-        <h1>МАРС</h1>
+      <section class="hero">
+        <div class="hero__line">line</div>
+        <p class="hero__text">Точка назначения:</p>
+
+        <div class="hero__heading mask-group">
+          <!-- <h1 class="hero__heading">MAPC (fallback)</h1> -->
+          <video
+            class="mask-group__content"
+            src="dist/video/Mars.m4v"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
       </section>
     </main>
-    <div class="layout__content">
+    <div class="popup">
       <form>
         <h2>Бронирование Билетов</h2>
         <div>
