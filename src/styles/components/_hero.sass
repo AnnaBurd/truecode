@@ -2,7 +2,7 @@ $video_src_width: 1280
 $video_src_height: 676
 $aspect_ratio: calc($video_src_width / $video_src_height)
 
-$letters_width: 82vw
+$letters_width: min(82vw, 118rem)
 $letters_height: calc($letters_width / $aspect_ratio)
 
 .hero
@@ -37,11 +37,15 @@ $letters_height: calc($letters_width / $aspect_ratio)
     &__text
         text-transform: uppercase
         color: var(--fiery-red)
-        font-size: 3.6rem
         font-weight: 500
         letter-spacing: 0.04em
         padding-top: 3.4rem
         padding-left: 1.8rem
+        padding-left: clamp(0.4rem, 2vw, 3.2rem)
+        font-size: clamp(2.2rem, 2.5vw, 3.6rem)
+        padding-bottom: 2rem
+        @media (min-width: 1024px)
+            padding-bottom: 0
 
 .mask-group
     position: relative

@@ -6,18 +6,23 @@
         text-transform: uppercase
         font-family: var(--secondary-font-family)
         font-size: 11.4rem
+        font-size: clamp(6rem, 10vw, 11.4rem)
         font-weight: 500
         letter-spacing: 0.03em
         max-width: 15ch
         line-height: 1
-        transform: translateY(-1.5rem)
+        // transform: translateY(-1.5rem)
 
     &__input-group
         display: flex
         justify: stretch
-        gap: 2rem
         margin-top: 7.5rem //
         margin-bottom: 6rem //
+        flex-direction: column
+        gap: 4rem
+        @media (min-width: 768px)
+            flex-direction: row
+            gap: 2rem
     &__input
         flex: 1
         display: flex
@@ -39,4 +44,6 @@
     &__submit-btn
         display: block
         margin-left: auto
-        width: calc(100% / 3 - 2rem)
+        width: 100%
+        @media (min-width: 768px)
+            width: calc(100% / 3 - 2rem)
