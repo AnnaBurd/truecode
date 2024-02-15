@@ -1,4 +1,8 @@
 .container
     max-width: 144rem
     margin: 0 auto
-    padding: 0 12rem
+    padding: 0 3rem
+    @media (min-width: 768px)
+        padding: 0 clamp(3rem, 6vw, 12rem)
+    @media (min-width: 1440px)
+        padding: 0 12rem

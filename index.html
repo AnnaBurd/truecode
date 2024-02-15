@@ -12,7 +12,12 @@
         <div class="header__logo">
           <img src="dist/logo.svg" alt="Mars Logo" />
         </div>
-        <nav class="header__nav">
+        <nav class="header__nav" id="nav-menu">
+          <div class="header__menu-btn burg" id="nav-btn">
+            <div class="burg__bar burg__bar--1"></div>
+            <div class="burg__bar burg__bar--2"></div>
+            <div class="burg__bar burg__bar--3"></div>
+          </div>
           <ul>
             <li><a class="header__navlink" href="#">О Марсе</a></li>
             <li><a class="header__navlink" href="#">Процесс</a></li>
@@ -20,6 +25,7 @@
             <li><a class="header__navlink" href="#">Новости</a></li>
             <li><a class="header__navlink" href="#">Контакты</a></li>
           </ul>
+          <div class="header__bg"></div>
         </nav>
         <button class="btn header__action-button" onclick="togglePopup()">
           Купить Билеты
