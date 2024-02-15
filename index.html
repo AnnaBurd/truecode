@@ -21,7 +21,9 @@
             <li><a class="header__navlink" href="#">Контакты</a></li>
           </ul>
         </nav>
-        <button class="btn header__action-button">Купить Билеты</button>
+        <button class="btn header__action-button" onclick="togglePopup()">
+          Купить Билеты
+        </button>
       </div>
     </header>
     <main class="">
@@ -60,7 +62,7 @@
         </div>
       </section>
     </main>
-    <div class="popup">
+    <div class="popup" id="popup">
       <div class="container">
         <div class="popup__content">
           <form class="form">
@@ -89,7 +91,10 @@
               Купить Билеты
             </button>
           </form>
-          <button class="popup__close-btn btn btn--icon">
+          <button
+            class="popup__close-btn btn btn--icon"
+            onclick="togglePopup()"
+          >
             <svg
               width="12"
               height="12"

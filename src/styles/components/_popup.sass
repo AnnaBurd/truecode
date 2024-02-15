@@ -1,4 +1,5 @@
 .popup
+    display: none
     position: fixed
     top: 0
     left: 0
@@ -16,3 +17,10 @@
         right: 0
         padding: 1rem
         cursor: pointer
+
+.popup.active
+    display: block
+
+// Disable scrolling when popup is open
+body.popup-active
+    overflow: hidden

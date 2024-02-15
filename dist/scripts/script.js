@@ -9,4 +9,11 @@ const handleBackgroundMovement = (e) => {
   backgroundElement.style.backgroundPosition = `${moveX}% ${moveY}%`;
 };
 
+// Handle popup opening and closing
 document.addEventListener("mousemove", handleBackgroundMovement);
+
+const popupElement = document.querySelector("#popup");
+const togglePopup = () => {
+  document.body.classList.toggle("popup-active");
+  popupElement.classList.toggle("active");
+};
