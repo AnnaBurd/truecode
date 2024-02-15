@@ -33,14 +33,14 @@
       </div>
     </header>
     <main class="">
-      <section class="hero">
-        <div class="background" id="moving-bg"></div>
-        <div class="fog">
+      <section class="hero reveal">
+        <div class="background reveal__bg" id="moving-bg"></div>
+        <div class="fog reveal__fog">
           <div class="fog__layer fog__layer--1"></div>
         </div>
 
         <div class="hero__content container">
-          <div class="hero__line">
+          <div class="hero__line reveal__line">
             <svg
               viewBox="0 0 10 605"
               fill="none"
@@ -48,16 +48,21 @@
               preserveAspectRatio="xMidYMax"
             >
               <!-- Vertical line -->
-              <path d="M5 0V605" stroke="#D9D9D9" stroke-width="2" />
+              <path
+                class="v-line"
+                d="M5 0V605"
+                stroke="#D9D9D9"
+                stroke-width="2"
+              />
               <!-- Top dot -->
               <circle cx="5" cy="3" r="3" fill="#D9D9D9" />
               <!-- Bottom dot -->
-              <circle cx="5" cy="600" r="5" fill="#D9D9D9" />
+              <circle class="dot" cx="5" cy="600" r="5" fill="#D9D9D9" />
             </svg>
           </div>
-          <p class="hero__text">Точка назначения:</p>
+          <p class="hero__text reveal__text">Точка назначения:</p>
 
-          <div class="hero__heading mask-group">
+          <div class="hero__heading mask-group reveal__heading">
             <!-- <h1 class="hero__heading">MAPC (fallback)</h1> -->
             <video
               class="mask-group__content"

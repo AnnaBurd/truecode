@@ -9,9 +9,12 @@ const handleBackgroundMovement = (e) => {
   backgroundElement.style.backgroundPosition = `${moveX}% ${moveY}%`;
 };
 
-// Handle popup opening and closing
-document.addEventListener("mousemove", handleBackgroundMovement);
+// Wait for the initial animation to finish before adding the mousemove event listener
+setTimeout(() => {
+  document.addEventListener("mousemove", handleBackgroundMovement);
+}, 1000);
 
+// Handle popup opening and closing
 const popupElement = document.querySelector("#popup");
 const togglePopup = () => {
   document.body.classList.toggle("popup-active");
@@ -41,3 +44,9 @@ const handleOutsideClick = (e) => {
 };
 
 document.addEventListener("click", handleOutsideClick);
+
+// Reveal elements on page load
+const contentRevealContainerEl = document.querySelector(".reveal");
+document.addEventListener("DOMContentLoaded", function () {
+  contentRevealContainerEl.setAttribute("data-state", "visible");
+});
