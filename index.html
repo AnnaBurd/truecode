@@ -34,7 +34,9 @@
     </header>
     <main class="">
       <section class="hero reveal">
-        <div class="background reveal__bg" id="moving-bg"></div>
+        <div class="background-wrapper">
+          <div class="background reveal__bg" id="moving-bg"></div>
+        </div>
         <div class="fog reveal__fog">
           <div class="fog__layer fog__layer--1"></div>
         </div>
@@ -67,6 +69,7 @@
             <video
               class="mask-group__content"
               src="dist/video/Mars.m4v"
+              disablePictureInPicture="true"
               autoplay
               loop
               muted

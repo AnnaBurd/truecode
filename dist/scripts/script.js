@@ -3,7 +3,7 @@
 Usually, though, I would use a JavaScript framework like React with component-based approach.
 */
 
-// Handle background image movements
+// Handle background image movements--------------------------------------------
 const backgroundElement = document.querySelector("#moving-bg");
 
 const handleBackgroundMovement = (e) => {
@@ -14,7 +14,7 @@ const handleBackgroundMovement = (e) => {
   backgroundElement.style.backgroundPosition = `${moveX}% ${moveY}%`;
 };
 
-// Wait for the initial animation to finish before adding the mousemove event listener
+// Wait for the initial animation to finish before adding the mousemove event listener------------------------------------------------------------------------
 setTimeout(() => {
   document.addEventListener("mousemove", handleBackgroundMovement);
 }, 1000);
@@ -26,7 +26,7 @@ const togglePopup = () => {
   popupElement.classList.toggle("active");
 };
 
-// Handle navigation menu opening and closing
+// Handle navigation menu opening and closing-----------------------------------
 const navMenuBtn = document.querySelector("#nav-btn");
 const navMenu = document.querySelector("#nav-menu");
 
@@ -50,8 +50,58 @@ const handleOutsideClick = (e) => {
 
 document.addEventListener("click", handleOutsideClick);
 
-// Reveal elements on page load
+// Reveal elements on page load -----------------------------------------------
 const contentRevealContainerEl = document.querySelector(".reveal");
 document.addEventListener("DOMContentLoaded", function () {
   contentRevealContainerEl.setAttribute("data-state", "visible");
 });
+
+// Fallback for browsers that don't support the 'mask-image' css property ------
+const supportsMaskImage = CSS.supports("mask-image", "url()");
+
+const maskImageFallback = () => {
+  console.warn("Mask image not supported, falling back to canvas video mask.");
+
+  const containerEl = document.querySelector(".hero__heading");
+
+  // Remove the mask-group class and video element
+  containerEl.classList.remove("mask-group");
+  containerEl.innerHTML = "";
+
+  // Create a canvas element and append it to the containerEl
+  const canvas = document.createElement("canvas");
+  canvas.width = containerEl.offsetWidth;
+  canvas.height = containerEl.offsetHeight;
+
+  containerEl.appendChild(canvas);
+
+  // Load the mask image and video
+  const maskImage = new Image();
+  maskImage.src = "dist/images/Mask.png";
+
+  const video = document.createElement("video");
+  video.src = "dist/video/Mars.m4v";
+  video.loop = true;
+  video.muted = true;
+  video.autoplay = true;
+  video.load();
+  video.play();
+
+  const ctx = canvas.getContext("2d");
+
+  // Draw the mask image and video on the canvas
+  const draw = () => {
+    i = window.requestAnimationFrame(draw);
+    ctx.drawImage(maskImage, 0, 0, canvas.width, canvas.height);
+    ctx.globalCompositeOperation = "source-in";
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+  };
+
+  video.addEventListener("loadeddata", () => {
+    draw();
+  });
+};
+
+if (!supportsMaskImage) {
+  maskImageFallback();
+}

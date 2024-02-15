@@ -5,7 +5,7 @@ Note: I replaced the Bebas Neue font with the Cyrillic version, because the orig
 
 /* montserrat-regular - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -18,7 +18,7 @@ Note: I replaced the Bebas Neue font with the Cyrillic version, because the orig
 
 /* montserrat-500 - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -31,7 +31,7 @@ Note: I replaced the Bebas Neue font with the Cyrillic version, because the orig
 
 /* montserrat-600 - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
@@ -44,7 +44,7 @@ Note: I replaced the Bebas Neue font with the Cyrillic version, because the orig
 
 /* montserrat-700 - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -57,7 +57,7 @@ Note: I replaced the Bebas Neue font with the Cyrillic version, because the orig
 
 /* montserrat-800 - cyrillic_cyrillic-ext_latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
@@ -70,7 +70,7 @@ Note: I replaced the Bebas Neue font with the Cyrillic version, because the orig
 
 /* bebas-neue-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Bebas Neue";
   font-style: normal;
   font-weight: 400;
