@@ -61,23 +61,54 @@
       </section>
     </main>
     <div class="popup">
-      <form>
-        <h2>Бронирование Билетов</h2>
-        <div>
-          <label for="checkin">Дата заезда</label>
-          <input type="date" placeholder="13.05.2022" id="checkin" />
+      <div class="container">
+        <div class="popup__content">
+          <form class="form">
+            <h2 class="form__title">Бронирование Билетов</h2>
+            <div class="form__input-group">
+              <div class="form__input">
+                <label for="checkin">Дата заезда</label>
+                <input type="date" value="2022-05-13" id="checkin" />
+              </div>
+              <div class="form__input">
+                <label for="checkout">Дата выезда</label>
+                <input type="date" id="checkout" value="2032-05-13" />
+              </div>
+              <div class="form__input">
+                <label for="participants">Количество</label>
+                <input
+                  type="number"
+                  placeholder="1 человек"
+                  min="1"
+                  max="10000"
+                  id="participants"
+                />
+              </div>
+            </div>
+            <button type="submit" class="form__submit-btn btn btn--dark">
+              Купить Билеты
+            </button>
+          </form>
+          <button class="popup__close-btn btn btn--icon">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 1.71429L1.71429 4.08718e-07L12 10.2857L10.2857 12L0 1.71429Z"
+                fill="#D9D9D9"
+              />
+              <path
+                d="M1.71429 12L0 10.2857L10.2857 0L12 1.71429L1.71429 12Z"
+                fill="#D9D9D9"
+              />
+            </svg>
+          </button>
         </div>
-        <div>
-          <label for="checkout">Дата выезда</label>
-          <input type="date" placeholder="13.05.2022" id="checkout" />
-        </div>
-        <div>
-          <label for="participants">Количество</label>
-          <input type="number" placeholder="1" id="participants" />
-        </div>
-        <button type="submit">Купить Билеты</button>
-      </form>
-      <button>x</button>
+      </div>
     </div>
   </body>
   <script src="dist/scripts/script.js"></script>

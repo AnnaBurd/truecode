@@ -1,0 +1,39 @@
+.form
+    width: 100%
+    color: var(--dark-gray)
+
+    &__title
+        text-transform: uppercase
+        font-family: var(--secondary-font-family)
+        font-size: 11.4rem
+        font-weight: 500
+        margin-bottom: 2rem
+        max-width: 15ch
+        line-height: 1
+        transform: translateY(-1.5rem)
+
+    &__input-group
+        display: flex
+        justify: stretch
+        gap: 2rem
+        margin-top: 6rem //
+        margin-bottom: 6rem //
+    &__input
+        flex: 1
+        display: flex
+        flex-direction: column
+        label
+            font-size: 1.6rem
+            margin-bottom: 0.5rem
+            font-weight: 600
+
+        input
+            background-color: transparent
+            border: none
+            border-bottom: 1px solid var(--dark-gray)
+            &:focus
+                outline: none
+
+    &__submit-btn
+        display: block
+        margin-left: auto
