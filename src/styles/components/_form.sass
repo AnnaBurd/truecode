@@ -12,13 +12,13 @@
         letter-spacing: 0.03em
         max-width: 15ch
         line-height: 1
-        // transform: translateY(-1.5rem)
+        transform: translateY(-1.5rem)
 
     &__input-group
         display: flex
         justify: stretch
-        margin-top: 7.5rem //
-        margin-bottom: 6rem //
+        margin-top: 7.8rem
+        margin-bottom: 5.8rem
         flex-direction: column
         gap: 4rem
         @media (min-width: 768px)
@@ -28,7 +28,6 @@
         flex: 1
         display: flex
         flex-direction: column
-        // cursor: pointer
         label
             font-size: 1.6rem
             margin-bottom: 1.2rem
@@ -47,8 +46,11 @@
                 outline: none
 
     &__submit-btn
+        text-transform: uppercase
         display: block
         margin-left: auto
         width: 100%
+        font-size: 1.6rem
+        font-weight: 600
         @media (min-width: 768px)
-            width: calc(100% / 3 - 2rem)
+            width: calc(100% / 3 - 1.4rem)

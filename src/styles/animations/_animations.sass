@@ -1,3 +1,6 @@
+/* Note: for this project, I used basic CSS animation keyframes + manually configured timings + toggle animation start by adding class with JS. For more advanced animations I prefer using GSAP/Framer Motion. */
+
+// Initial state of the animated elements 
 .reveal
     &__line
         position: relative
@@ -17,6 +20,7 @@
     &__fog
         opacity: 0.15
 
+// Animations
 .reveal[data-state="visible"]
     .reveal__line
         .v-line
@@ -42,6 +46,7 @@
     .reveal__bg
         animation: moveInLeft 1s ease-in-out forwards
 
+// Animation keyframes
 @keyframes fadeInFog
     from
         opacity: 0.15

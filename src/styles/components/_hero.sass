@@ -2,8 +2,13 @@ $video_src_width: 1280
 $video_src_height: 676
 $aspect_ratio: calc($video_src_width / $video_src_height)
 
-$letters_width: min(82vw, 118rem)
-$letters_height: calc($letters_width / $aspect_ratio)
+:root
+
+    --hero-width: clamp(30rem, 82vw, 120vh)
+    --hero-height: calc(var(--hero-width) / #{$aspect_ratio})
+
+    @media (min-width: 1440px)
+        --hero-width: min(118rem, 125vh)
 
 .hero
     height: 100vh
@@ -13,23 +18,16 @@ $letters_height: calc($letters_width / $aspect_ratio)
         place-content: center start
         grid-template-columns: 1rem 1fr
     &__heading
-        // font-family: var(--secondary-font-family)
-        // color: var(--pale-yellow)
-        // font-size: 72rem
-        // font-weight: 500
-        // letter-spacing: -2rem
-        // line-height: 0.7
         margin-top: -2rem
-        width: $letters_width
-        height: $letters_height
+        width: var(--hero-width)
+        height: var(--hero-height)
 
     &__line
         grid-row: 1 / 3
         place-self: end
-        // height: $letters_height
-        height: calc($letters_height - 2rem)
+        height: calc(var(--hero-height) - 2rem)
         width: 200%
-        margin-bottom: calc($letters_height * 0.1)
+        margin-bottom: calc(var(--hero-height) * 0.1)
         svg
             width: 100%
             height: 100%
@@ -42,13 +40,15 @@ $letters_height: calc($letters_width / $aspect_ratio)
         font-weight: 500
         letter-spacing: 0.04em
         padding-top: 3.4rem
-        padding-left: 1.8rem
-        padding-left: clamp(0.4rem, 2vw, 3.2rem)
-        font-size: clamp(2.2rem, 2.5vw, 3.6rem)
+        padding-left: clamp(0.4rem, 1.2vw, 3.2rem)
+        font-size: clamp(2.2rem, 2.3vw, 3.6rem)
         padding-bottom: 2rem
         @media (min-width: 1024px)
-            padding-bottom: 0
+            padding-bottom: 1rem
+        @media (min-width: 1440px)
+            font-size: 3.6rem
 
+// Show a video inside the masked letters
 .mask-group
     position: relative
     overflow: hidden

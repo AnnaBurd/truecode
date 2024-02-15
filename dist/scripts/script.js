@@ -1,3 +1,8 @@
+/* Below is the collection of basic JavaScript functions that are used to handle the website's interactivity. 
+
+Usually, though, I would use a JavaScript framework like React with component-based approach.
+*/
+
 // Handle background image movements
 const backgroundElement = document.querySelector("#moving-bg");
 

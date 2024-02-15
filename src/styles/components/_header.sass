@@ -16,7 +16,11 @@
 
     &__logo
         margin-right: auto
-        // width: 6rem
+        // width: 6rem // Can control logo size if needed
+
+    &__action-button
+        z-index: 50
+        text-transform: uppercase
 
     &__nav
         position: relative
@@ -26,22 +30,23 @@
         @media (min-width: 1024px)
             order: 0
         ul
+            // Mobile navigation menu (closed state)
             visibility: hidden
             display: flex
             opacity: 0
             align-items: center
             position: absolute
-            background-color: var(--dark-gray)
+            // background-color: var(--dark-gray)
             top: 6rem
             right: 6rem
             flex-direction: column
             justify-content: center
-            gap: 3rem
+            gap: 2.5rem
             z-index: 10
             transition: opacity 0.1 ease
 
+            // Desktop navigation menu
             @media (min-width: 1024px)
-                display: flex
                 visibility: visible
                 opacity: 1
                 position: static
@@ -61,28 +66,29 @@
         &:hover
             color: var(--fiery-red)
 
-    &__nav.active
-        .burg
-            &__bar
-                &--1
-                    transform: translateY(1.35rem) rotateZ(-45deg) scaleX(0.8)
-                &--2
-                    opacity: 0
-                &--3
-                    transform: translateY(-1.35rem) rotateZ(45deg) scaleX(0.8)
+    // Background for mobile navigation menu
+    &__bg
+        z-index: 1
 
-        .header__bg
-            width: 520px
-            height: 460px
-            transform: translate(-60%,-30%)
+        width: 520px
+        height: 460px
+        transform: translate(80%,-50%) scale(0.3) rotate(15deg)
+        margin: 30px 0 20px 20px
+        background-image: url('../../dist/images/Mars.png')
+        background-size: cover
+        background-position: center
+        border-radius: 50%
+        filter: grayscale(40%)
+        transition: 0.3s ease-out
+        top: -14rem
+        right: -18rem
+        position: absolute
 
-        ul
-            visibility: visible
-            opacity: 1
-            transition: opacity 0.3s 0.1s ease
+        @media (min-width: 1024px)
+            display: none
 
+    // Hamburguer menu button
     &__menu-btn
-
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -104,21 +110,22 @@
             border-radius: 5px
             transition: 0.3s ease
 
-    &__bg
-        z-index: 1
-        width: 0
-        height: 0
-        margin: 30px 0 20px 20px
-        background: radial-gradient(circle, var(--dark-gray), var(--dark-gray))
-        border-radius: 50%
-        transition: 0.3s ease
-        top: 0
-        left: 0
-        position: absolute
+    // Style mobile navigation menu in open state (there were no styles for this in the original maket)
+    &__nav.active
+        .burg
+            &__bar
+                &--1
+                    transform: translateY(1.35rem) rotateZ(-45deg) scaleX(0.8)
+                &--2
+                    opacity: 0
+                &--3
+                    transform: translateY(-1.35rem) rotateZ(45deg) scaleX(0.8)
 
-        @media (min-width: 1024px)
-            display: none
+        .header__bg
+            transform: translate(0,0) scale(1)
+            transition: 0.5s ease-in
 
-    &__action-button
-        z-index: 50
-        text-transform: uppercase
+        ul
+            visibility: visible
+            opacity: 1
+            transition: opacity 0.3s 0.2s ease
